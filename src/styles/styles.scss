@@ -31,6 +31,11 @@ body {
   border-radius: 999rem;
   background-color: #94a3b8;
   align-self: center;
+  transition: all 0.1s;
+
+  &.active {
+    background-color: #64748b;
+  }
 }
 
 .container {
@@ -43,6 +48,10 @@ body {
     & .hour-bar {
       height: 4.8rem;
       background-color: #94a3b8;
+
+      &.active {
+        background-color: #64748b;
+      }
     }
   }
 
@@ -67,6 +76,16 @@ body {
   }
 }
 
-.minute-bar--gray {
-  background-color: #64748b !important;
+.minute-bar {
+  &.active {
+    background-color: #64748b !important;
+  }
+
+  &--gray {
+    background-color: #cbd5e1 !important;
+
+    &.active {
+      background-color: #334155 !important;
+    }
+  }
 }
