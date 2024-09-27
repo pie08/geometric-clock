@@ -1,0 +1,30 @@
+.time-guess-form {
+  display: flex;
+  gap: 1.6rem;
+  align-items: start;
+
+  & input {
+    font-size: 1.4rem;
+    border: 1px solid #e2e8f0;
+    border-radius: 0.4rem;
+    background-color: #f8fafc;
+    padding: 0.8rem 1.2rem;
+  }
+
+  & button {
+    display: block;
+    border: none;
+    border-radius: 0.4rem;
+    background-color: var(--color-bar-active);
+    font-size: 1.6rem;
+    color: #f8fafc;
+    font-weight: 600;
+    padding: 0.8rem 1.2rem;
+    transition: all 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      background-color: var(--color-bar-active-dark);
+    }
+  }
+}
