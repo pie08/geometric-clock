@@ -15,13 +15,16 @@ const TimeGuessForm: FC<TimeGuessFormProps> = ({ time }) => {
   const regex = new RegExp(/^([01]?[0-9]|2[0-3]):[0-5][0-9]$/);
 
   useEffect(() => {
+    // validate on value change
     setIsValid(regex.test(guessValue));
   }, [guessValue]);
 
   const onSubmit: FormEventHandler = (e) => {
     e.preventDefault();
+    // reuturn if input not valid
     if (!isValid) return;
 
+    // check if corrects
     const [guessHours, guessMinutes] = guessValue
       .split(":")
       .map((val) => Number(val));
