@@ -20,7 +20,7 @@ function App() {
     <div className="layout">
       <Clock time={time} />
 
-      <TimeGuessForm />
+      <TimeGuessForm time={time} />
     </div>
   );
 }

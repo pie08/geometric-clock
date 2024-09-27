@@ -9,6 +9,10 @@
     border-radius: 0.4rem;
     background-color: #f8fafc;
     padding: 0.8rem 1.2rem;
+
+    &.correct {
+      outline: 2px solid #22c55e;
+    }
   }
 
   & button {
@@ -25,6 +29,25 @@
     &:hover {
       cursor: pointer;
       background-color: var(--color-bar-active-dark);
+    }
+  }
+
+  & .error-text {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: red;
+    margin-top: 0.6rem;
+    margin-left: 1.2rem;
+    transition: all 0.2s;
+
+    translate: 0 -3rem;
+    opacity: 0;
+    visibility: hidden;
+
+    &.active {
+      opacity: 1;
+      visibility: visible;
+      translate: 0 0;
     }
   }
 }
